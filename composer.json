@@ -1,0 +1,87 @@
+{
+    "name": "adnan-smlatic/filament-media-library",
+    "description": "A convenient media library for Filament Admin (v4 fork).",
+    "keywords": [
+        "filament",
+        "laravel",
+        "media-library"
+    ],
+    "homepage": "https://github.com/adnan-smlatic/filament-media-library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralph J. Smit",
+            "email": "rjs@ralphjsmit.com",
+            "role": "Original Developer"
+        },
+        {
+            "name": "Adnan Smlatić",
+            "email": "adnan.smlatic1@gmail.com",
+            "role": "v4 Migration"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^4.0",
+        "filament/spatie-laravel-media-library-plugin": "^4.0",
+        "filament/spatie-laravel-tags-plugin": "^4.0",
+        "illuminate/contracts": "^10.48|^11.0|^12.0",
+        "livewire/livewire": "^3.4.6",
+        "php-ffmpeg/php-ffmpeg": "^1.0",
+        "spatie/laravel-collection-macros": "^7.10|^8.0",
+        "spatie/laravel-medialibrary": "^9.0|^10.0.3|^11.0",
+        "spatie/laravel-package-tools": "^1.11.0",
+        "spatie/laravel-tags": "^4.3",
+        "spatie/pdf-to-image": "^2.2|^3.0"
+    },
+    "require-dev": {
+        "filament/upgrade": "^4.0",
+        "laravel/pint": "^1.0",
+        "nesbot/carbon": "^2.64|^3.1",
+        "nunomaduro/collision": "^7.0|^8.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "pestphp/pest": "^1.21|^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^1.1|^2.0|^3.0",
+        "pestphp/pest-plugin-livewire": "^1.2|^2.0|^3.0",
+        "phpunit/phpunit": "^9.5|^10.0|^11.5",
+        "spatie/laravel-ray": "^1.29",
+        "spatie/pest-plugin-test-time": "^1.0|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RalphJSmit\\Filament\\MediaLibrary\\": "src",
+            "RalphJSmit\\Filament\\MediaLibrary\\Database\\Factories\\": "database/factories"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RalphJSmit\\Filament\\MediaLibrary\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RalphJSmit\\Filament\\MediaLibrary\\FilamentMediaLibraryServiceProvider"
+            ],
+            "aliases": {
+                "MediaLibrary": "RalphJSmit\\Filament\\MediaLibrary\\Facades\\MediaLibrary"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
